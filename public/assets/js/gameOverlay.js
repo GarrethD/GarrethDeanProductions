@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             release: "TBA",
             genre: "Arcade Action wave shooter",
             description: "Project Augment is a arcade action style wave shooter set in the same universe as Cloaked Protocol.",
-            bg: "assets/images/ProjectAugment_PromoImage_NoText.png",
+            bg: "assets/images/ProjectAugment_NoTitle.jpg",
             fog: "assets/videos/hellsmoke.webm",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },

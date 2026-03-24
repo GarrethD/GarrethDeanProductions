@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { featuredGames } from "../data/site";
+---
+
+<BaseLayout
+  title="Games | Garreth Dean Production"
+  description="Game projects from Garreth Dean Production, led by atmosphere, trailers, store intent, and worldbuilding."
+  path="/games"
+>
+  <section class="page-hero page-hero--compact">
+    <p class="section-label">Games</p>
+    <h1>Current projects.</h1>
+    <p>
+      Cloaked Protocol is the flagship release. Project Augment sits in the same universe and helps bridge the wait while
+      core ideas, features, and combat systems continue to take shape.
+    </p>
+  </section>
+
+  <section class="project-stack">
+    {
+      featuredGames.map((game) => (
+        <article class="project-card">
+          <div class="project-card__media">
+            <img src={game.image} alt={game.title} />
+            <video autoplay muted loop playsinline>
+              <source src={game.video} type="video/webm" />
+            </video>
+          </div>
+          <div class="project-card__content">
+            <p class="section-label">{game.tag}</p>
+            <img class="project-card__logo" src={game.logo} alt={game.title} />
+            <h2>{game.title}</h2>
+            <div class="project-card__meta">
+              <div>
+                <span>Status</span>
+                <strong>{game.status}</strong>
+              </div>
+              <div>
+                <span>Role</span>
+                <strong>{game.platforms}</strong>
+              </div>
+            </div>
+            <p>{game.summary}</p>
+            <div class="cta-row">
+              <a class="button button--primary" href={game.primaryCta.href}>{game.primaryCta.label}</a>
+              <a class="button button--ghost" href={game.secondaryCta.href}>{game.secondaryCta.label}</a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+
+  <section class="grid-panel">
+    <article class="panel panel--statement">
+      <p class="section-label">Slate Strategy</p>
+      <h2>One flagship, one companion project.</h2>
+      <p>
+        Cloaked Protocol is the main release and the long-term focus. Project Augment gives players a way into the same
+        universe sooner, while also helping refine features, combat ideas, and systems that support Cloaked Protocol.
+      </p>
+    </article>
+
+    <article class="panel panel--statement">
+      <p class="section-label">Why Both Matter</p>
+      <ul class="sharp-list">
+        <li>Cloaked Protocol carries the main world, tone, and long-term release plan</li>
+        <li>Project Augment lets the universe stay active between larger milestones</li>
+        <li>Augment can test mechanics and pacing before they feed back into Cloaked</li>
+        <li>Both projects should feel connected without competing for the same role</li>
+      </ul>
+    </article>
+  </section>
+</BaseLayout>

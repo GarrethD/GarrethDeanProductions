@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NewsletterSignup from "../components/NewsletterSignup";
+---
+
+<BaseLayout
+  title="Newsletter | Garreth Dean Production"
+  description="Subscribe for development updates, announcements, trailers, and direct studio communication from Garreth Dean Production."
+  path="/newsletter"
+>
+  <section class="page-hero page-hero--compact">
+    <p class="section-label">Newsletter</p>
+    <h1>Direct updates. No algorithm in the way.</h1>
+    <p>
+      This signup now feeds Supabase directly, so newsletter subscriptions live under your own database instead of a third-party embed.
+    </p>
+  </section>
+
+  <section class="grid-panel">
+    <article class="panel panel--statement">
+      <p class="section-label">Why It Matters</p>
+      <h2>The audience you can reach directly matters most.</h2>
+      <ul class="sharp-list">
+        <li>Launch announcements and new footage</li>
+        <li>Milestones, reveal beats, and production notes</li>
+        <li>Direct audience ownership outside social platforms</li>
+      </ul>
+    </article>
+
+    <article class="panel panel--statement">
+      <p class="section-label">Subscribe</p>
+      <h2>Join the studio dispatch.</h2>
+      <div class="newsletter-embed">
+        <NewsletterSignup client:load />
+      </div>
+    </article>
+  </section>
+</BaseLayout>

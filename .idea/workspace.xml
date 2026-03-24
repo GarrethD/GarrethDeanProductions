@@ -5,8 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/SimpleWorkflowBasic.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/SimpleWorkflowBasic.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/landing.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/newsletter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/overlay.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/pitchdeck.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/wishlist.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CloakedProtoclNameOnly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CloakedProtocolLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CloakedProtocol_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CloakedprotocolPromoImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CloakedprotocolPromoImage2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/CompanyLogo-White.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Jack.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/JackFullBody.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Logos/4 BG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Logos/Cloaked_Protocol_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/ProjectAugmentPageBG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/ProjectAugment_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/ProjectAugment_PromoImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/ProjectAugment_PromoImage_NoText.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/library_capsule_NoText.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/red body preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/red body transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gameOverlay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/pitchdeck.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/pitchdeckPins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/videos/fog.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/videos/hellsmoke.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pitchdeck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +95,8 @@
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
       <workItem from="1753098719814" duration="60263000" />
-      <workItem from="1753211509566" duration="28000" />
+      <workItem from="1753211509566" duration="156000" />
+      <workItem from="1774369223391" duration="5073000" />
     </task>
     <servers />
   </component>
@@ -69,5 +106,13 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

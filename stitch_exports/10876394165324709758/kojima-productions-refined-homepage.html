@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KOJIMA PRODUCTIONS | LUDENS PROTOCOL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&amp;family=Inter:wght@300;400;600&amp;family=Rajdhani:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353535",
+              "inverse-on-surface": "#303030",
+              "inverse-primary": "#5d5f5f",
+              "on-tertiary-container": "#000000",
+              "on-surface-variant": "#c6c6c6",
+              "on-primary-container": "#000000",
+              "outline-variant": "#474747",
+              "on-tertiary-fixed-variant": "#e1e3e4",
+              "on-error": "#690005",
+              "primary-container": "#d4d4d4",
+              "surface-dim": "#131313",
+              "secondary-container": "#474747",
+              "on-background": "#e2e2e2",
+              "surface-container": "#1f1f1f",
+              "on-secondary": "#1b1c1c",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container-high": "#2a2a2a",
+              "secondary": "#c8c6c6",
+              "on-primary-fixed": "#ffffff",
+              "secondary-fixed": "#c8c6c6",
+              "surface": "#131313",
+              "tertiary": "#e1e3e4",
+              "on-secondary-container": "#e4e2e2",
+              "on-surface": "#e2e2e2",
+              "inverse-surface": "#e2e2e2",
+              "tertiary-fixed": "#5c5f60",
+              "on-tertiary-fixed": "#ffffff",
+              "error-container": "#93000a",
+              "background": "#131313",
+              "on-primary": "#1a1c1c",
+              "outline": "#919191",
+              "tertiary-container": "#8f9192",
+              "secondary-fixed-dim": "#acabab",
+              "primary-fixed-dim": "#454747",
+              "primary-fixed": "#5d5f5f",
+              "primary": "#ffffff",
+              "on-tertiary": "#191c1d",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "tertiary-fixed-dim": "#454748",
+              "error": "#ffb4ab",
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-variant": "#353535",
+              "surface-tint": "#c6c6c7",
+              "surface-container-low": "#1b1b1b",
+              "on-secondary-fixed-variant": "#3b3b3b"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"],
+              "tech": ["Rajdhani"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .monolith-clip {
+            clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #474747; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-transparent backdrop-blur-xl dark:bg-black/40">
+<div class="text-xl font-black tracking-tighter text-white dark:text-white font-headline">
+            KOJIMA PRODUCTIONS
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-white border-b border-white pb-1" href="#">MISSIONS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-zinc-500 hover:text-white transition-colors duration-300" href="#">TECHNOLOGY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-zinc-500 hover:text-white transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[10px] font-bold text-zinc-500 hover:text-white transition-colors duration-300" href="#">STORE</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section: The Monolith -->
+<section class="relative h-screen w-full overflow-hidden bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic landscape" class="w-full h-full object-cover opacity-60 grayscale" data-alt="atmospheric cinematic landscape with dark jagged mountains under a heavy overcast sky with mist clinging to the valley floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJkOgo5s3CmTYP8K13C7w2oK6GgMGUF2-0Lkdg7j-BU7ay1CUrM0RocuvQO1YCthuz68lMzqSeEF-tKD24WO1CoeKfU7a7RODgrzFJTakyTLp2P0JdrlVIHKjpCQBGC54q6d3SUYMsLW6gzPZhSwWOmxiMWRlkWnVSmM15OxoXIYVUqYXRg9ovoESLIzLK5LmdrfQominPFoTKP3qqc-n7jTRVQn2H8AQf-J5ST5MwuZOxuG7O5ECzQE3EKiW7NzQT1ukz2wTFrxAs"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="relative z-10 h-full flex flex-col justify-end px-12 pb-24 max-w-7xl mx-auto w-full">
+<div class="space-y-4">
+<span class="font-label uppercase tracking-[0.4em] text-xs text-primary/60">SYSTEM STATUS: OPERATIONAL</span>
+<h1 class="font-headline font-black text-7xl md:text-9xl tracking-tighter leading-none text-white uppercase">
+                        FROM SAPIENS<br/>TO LUDENS
+                    </h1>
+<p class="max-w-xl text-neutral-Tone font-light leading-relaxed text-lg mt-8">
+                        We are those who play. From the moment we are born, we discover the world through play. It is our primal instinct and our highest evolution.
+                    </p>
+<div class="flex gap-4 pt-12">
+<button class="bg-primary text-on-primary px-10 py-4 font-label uppercase tracking-widest text-xs hover:bg-primary-container transition-colors duration-300">
+                            EXPLORE ARCHIVE
+                        </button>
+<button class="border border-outline-variant text-white px-10 py-4 font-label uppercase tracking-widest text-xs hover:bg-surface-container-high transition-colors duration-300">
+                            INITIATE PROTOCOL
+                        </button>
+</div>
+</div>
+</div>
+<!-- Technical Metadata Overlay -->
+<div class="absolute right-12 bottom-24 hidden lg:block text-right">
+<div class="font-tech text-primary/20 text-xs tracking-widest space-y-2">
+<div>LAT: 35.6895° N</div>
+<div>LONG: 139.6917° E</div>
+<div>VER: 2.0.24_LUDENS</div>
+</div>
+</div>
+</section>
+<!-- News/Feed Section: Asymmetric Layout -->
+<section class="bg-surface py-32 px-12 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<h2 class="font-headline font-bold text-5xl tracking-tight text-white uppercase">INTEL FEED</h2>
+<div class="h-px flex-grow bg-outline-variant mx-12 hidden md:block opacity-30"></div>
+<a class="font-label text-xs tracking-widest text-primary/50 hover:text-primary transition-colors" href="#">VIEW ALL TRANSMISSIONS —&gt;</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Large Featured Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden aspect-[16/9] mb-8 bg-surface-container-lowest">
+<img alt="Featured news" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="abstract high-tech laboratory interior with glowing blue interfaces and cold metallic surfaces in sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdM04cLvB8NQRrgIaI3a7JpAc9XmwasO8sx_YU52wuvIweUueChq_7x9xijgXBkCTtcdV3Ysjg6wGCkAID_KADrVXiMbVFT8Vx3mrboddLn6WkixFHZEoYJZGk7Hx5-sgOSG4cxeFE7he00Xw-KjJkz0UHqL4Rj7uLzP9kOWa30AcG_3eZ5qrKArA_1dwEBhQHO00ch7UClo9FDl0Pf-u-zjYCgOjN0wIO6hdsequ41ypZteebX9rmmF47_WmuYljI0n4pTnW3JYVC"/>
+<div class="absolute top-6 left-6 bg-white text-black px-4 py-1 text-[10px] font-bold tracking-widest uppercase">TOP PRIORITY</div>
+</div>
+<div class="space-y-4">
+<span class="font-tech text-sm text-primary/40">DATE: 2024.11.12 // TYPE: ANNOUNCEMENT</span>
+<h3 class="font-headline font-bold text-3xl text-white group-hover:text-primary-container transition-colors">NEW FRONTIER EXPLORATION: THE EXPANSION OF VIRTUAL WORLDS</h3>
+<p class="text-neutral-Tone leading-relaxed max-w-2xl font-light">The boundaries between reality and digital simulation continue to dissolve. Our latest research into immersive narrative structures reveals new potential for human connection.</p>
+</div>
+</div>
+<!-- Side Column Cards -->
+<div class="md:col-span-4 space-y-20">
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-lowest overflow-hidden mb-6">
+<img alt="Tech news" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="macro photograph of intricate circuit board patterns with gold traces and obsidian-like substrate materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpwWueB83vtzTcwp1Guf54ZHX_JiL_x5tgmXe1ntOB-YdzErq2Z9wmq1CHqHrSRavvcGKwmh3T5B5Z1mvfSAIHC4eq18_OR0z_XU_91m6mL_t5TF3YfCAoN9tM2ty9OJo9Yl0HncJHaGmrZvMx19TuxXM_m3Oiet7kU9uuq1COu75u_OydqcYm0s03BpvBmnFVHCQPcGHYMnil6sXRTBaP228K0FunPpU1EnBB9_xK7G6WiO4IWcAc6CEjKtCpIu8slKSWPgr-9TPa"/>
+</div>
+<span class="font-tech text-xs text-primary/40">TECH SPEC</span>
+<h4 class="font-headline font-bold text-lg text-white mt-2">DECRYPTING THE LUDENS ENGINE</h4>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-lowest overflow-hidden mb-6">
+<img alt="Event news" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="silhouetted film crew working in a vast dark studio space with a single bright spotlight creating dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvamrFakjxxF_qCknamDXZTexy96WDUAi6Xa58mlHFrz2YC0CwtTSTnM-q7a69dux516ZYcrZrmleOCnKZo4T457bRoTnaHB_1EIyV2TI5vIu9QMwjohxX8C1JXrHnkljxV0m6qwisjY2l_1b4BvEwvX5R1a-ZCpGEfpol5EqYadBNJW30EAvfzVWqZkc58tTeUwVbyJ4a4mmTNTXhaJcUhH9R05gX4gruohCQ4gBMnSQFUzBEFydyQEiZ1F9brkucIgrRladIIibC"/>
+</div>
+<span class="font-tech text-xs text-primary/40">EVENT LOG</span>
+<h4 class="font-headline font-bold text-lg text-white mt-2">BEHIND THE CURTAIN: MOTION CAPTURE FINALE</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Product/Gear Section: High-Light Contrast -->
+<section class="bg-surface-container-lowest py-32 px-12 border-t border-outline-variant/10">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-24">
+<h2 class="font-headline font-black text-8xl tracking-tighter text-white/5 absolute -mt-16 pointer-events-none">EQUIPMENT</h2>
+<h2 class="font-headline font-bold text-5xl tracking-tight text-white relative z-10">LUDENS GEAR</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Product 1 -->
+<div class="bg-surface p-12 group transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden">
+<div class="relative z-10">
+<div class="font-tech text-xs text-primary/30 mb-12">REF: KP-A01</div>
+<div class="aspect-square mb-12 flex items-center justify-center">
+<img alt="Gear 1" class="max-w-full grayscale brightness-125 transition-transform duration-500 group-hover:scale-110" data-alt="minimalist sleek black professional headphones resting on a dark reflective surface with sharp lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-h9xIPlYChek89shJmIIDRdFbLMQnl2q8dqNwKgl1gXoyb2y5t5G20VZMzetidyzvM--_Tmyz9H-7ZfBHBiZD7imFXT-SRn80VflkriweJa758YPuhMFTlwEA3lfgaCzxR9-shSHJm1tPckbik9hS8rFia0_sa8l0gT1nzTKXm2JM1A7uhlyO2esXiJIhz1OLE_TRFE--Ceb9cRA6CO3D2j2yhUoPOi7-9NCjjgd9mai_lUzHi2RvIdwkpE7NEbPJeyEh7UuIBrC7"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-white mb-2">PRO-SONIC INTERFACE</h3>
+<p class="text-neutral-Tone text-sm mb-8 font-light">High-fidelity acoustic sensory module for deep immersion.</p>
+<button class="text-[10px] font-bold tracking-[0.2em] uppercase text-white flex items-center gap-2 group-hover:gap-4 transition-all">
+                                ACQUIRE <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -right-4 -bottom-4 font-tech text-[120px] leading-none text-white/5 font-bold italic opacity-0 group-hover:opacity-100 transition-opacity">01</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface p-12 group transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden">
+<div class="relative z-10">
+<div class="font-tech text-xs text-primary/30 mb-12">REF: KP-B02</div>
+<div class="aspect-square mb-12 flex items-center justify-center">
+<img alt="Gear 2" class="max-w-full grayscale brightness-125 transition-transform duration-500 group-hover:scale-110" data-alt="elegant minimalist white luxury watch with a black face positioned against a dark textured backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wTcVZiOgvEauRd3yC7-8i1yHzCH4raRHLkE8EKAh0A1iHwaI_uys3pTHJCTJfMp2iS1ps7aOeBmkFz6a8C6XpctaAewqIhkn4yUeSI-yFdICuY3fa5cV7pVO1v7HkmWGr8nzFN8PBybIwtizcYl8VkRxuLT75DcQvi71BrPBMbGKPf5fOk3OqSxKAWeEpBhwOtfCp_MSfvUGRgD0lVW93VJKHJMcA_Jz3rsV24BgvAzN6lBC4F7GeYD8PNZDFSFfzQh1sXJYPMpC"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-white mb-2">CHRONO-LINK V2</h3>
+<p class="text-neutral-Tone text-sm mb-8 font-light">Precision temporal monitoring device for heavy operations.</p>
+<button class="text-[10px] font-bold tracking-[0.2em] uppercase text-white flex items-center gap-2 group-hover:gap-4 transition-all">
+                                ACQUIRE <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -right-4 -bottom-4 font-tech text-[120px] leading-none text-white/5 font-bold italic opacity-0 group-hover:opacity-100 transition-opacity">02</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface p-12 group transition-all duration-500 hover:bg-surface-container-high relative overflow-hidden">
+<div class="relative z-10">
+<div class="font-tech text-xs text-primary/30 mb-12">REF: KP-C03</div>
+<div class="aspect-square mb-12 flex items-center justify-center">
+<img alt="Gear 3" class="max-w-full grayscale brightness-125 transition-transform duration-500 group-hover:scale-110" data-alt="modern aerodynamic tactical athletic footwear in black and white shown in a dynamic pose with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6XWkUoN9c7PgOKtIaSShLHylrl8_X0jCpdKZhPuyWJ6xi1ufL3yxaTBX-H4Jn6rKoxdLwnutqEd-mhABZwUl50WhYnbSsPzdf1t0oXRMQeGJSw9hKK4N8jIWq7Ay65kkkgf9HxUL3EZEG8getEgKgp5rtrtLdqcgnDB9oO5oqTNSfY_hajksHdPwZalTe4n53A6gUOB40hAurHZ2I1fOlPzgWW1jyZWyVkaakj-UwHC2CT1k7k6d11M8FpXD6pMtRT4qrhjbxeqh"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-white mb-2">S-STRIDE UNIT</h3>
+<p class="text-neutral-Tone text-sm mb-8 font-light">Advanced mobility footwear with terrain adaptation.</p>
+<button class="text-[10px] font-bold tracking-[0.2em] uppercase text-white flex items-center gap-2 group-hover:gap-4 transition-all">
+                                ACQUIRE <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -right-4 -bottom-4 font-tech text-[120px] leading-none text-white/5 font-bold italic opacity-0 group-hover:opacity-100 transition-opacity">03</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote/Editorial Section -->
+<section class="bg-surface py-48 px-12">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<div class="w-16 h-px bg-primary mx-auto mb-16"></div>
+<h2 class="font-headline font-light italic text-4xl md:text-6xl text-white leading-tight">
+                    "I want to create things that people haven't seen before, experiences that haven't been lived."
+                </h2>
+<div class="space-y-2">
+<p class="font-headline font-bold text-white tracking-widest text-sm uppercase">HIDEO KOJIMA</p>
+<p class="font-tech text-primary/40 text-xs">FOUNDER &amp; GAME CREATOR</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-20 mt-24 bg-zinc-950 dark:bg-[#0E0E0E]">
+<div class="flex flex-col gap-4 mb-12 md:mb-0">
+<div class="text-lg font-bold text-white font-headline">KOJIMA PRODUCTIONS</div>
+<p class="font-['Space_Grotesk'] uppercase tracking-widest text-[9px] font-light text-zinc-600">
+                © 2024 KOJIMA PRODUCTIONS Co., Ltd. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[9px] font-light text-zinc-600 hover:text-white transition-all duration-500" href="#">PRIVACY POLICY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[9px] font-light text-zinc-600 hover:text-white transition-all duration-500" href="#">TERMS OF SERVICE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[9px] font-light text-zinc-600 hover:text-white transition-all duration-500" href="#">CONTACT</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-[9px] font-light text-zinc-600 hover:text-white transition-all duration-500" href="#">CAREERS</a>
+</div>
+<div class="mt-12 md:mt-0 flex gap-6">
+<span class="material-symbols-outlined text-white/20 hover:text-white cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-white/20 hover:text-white cursor-pointer transition-colors" data-icon="language">language</span>
+</div>
+</footer>
+</body></html>
