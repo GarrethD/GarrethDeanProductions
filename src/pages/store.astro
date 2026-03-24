@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const featuredProducts = [
+  {
+    label: "Pre-Order",
+    title: "Cloaked Protocol Founder Edition",
+    price: "$69",
+    description:
+      "A premium digital package built around the flagship release for early supporters and collector-minded players.",
+    image: "/assets/images/CloakedprotocolPromoImage2.png",
+  },
+  {
+    label: "Apparel",
+    title: "Garreth Dean Production Heavyweight Hoodie",
+    price: "$85",
+    description:
+      "A limited studio piece designed around a clean monochrome silhouette and a stronger collector feel than generic merch.",
+    image: "/assets/images/Jack.jpg",
+  },
+  {
+    label: "Collectible",
+    title: "Operative Archive Print Set",
+    price: "$45",
+    description:
+      "A curated print set built from key art, concept imagery, and worldbuilding visuals from the current projects.",
+    image: "/assets/images/ProjectAugment_NoTitle.jpg",
+  },
+  {
+    label: "Digital",
+    title: "Original Score and Atmosphere Pack",
+    price: "$18",
+    description:
+      "A digital bundle for soundtrack releases, ambient tracks, and behind-the-scenes art extras.",
+    image: "/assets/images/ProjectAugment_NoTitle.jpg",
+  },
+];
+---
+
+<BaseLayout
+  title="Store | Garreth Dean Production"
+  description="Store page for Garreth Dean Production with sections for merch, collector drops, soundtrack sales, and direct-to-audience releases."
+  path="/store"
+>
+  <section class="store-hero">
+    <img class="store-hero__bg" src="/assets/images/CloakedprotocolPromoImage2.png" alt="Store hero background" />
+    <div class="store-hero__veil"></div>
+    <div class="store-hero__content">
+      <p class="section-label">Store</p>
+      <h1>Store.</h1>
+      <p>
+        The store section is for releases, merchandise, collector items, and digital extras tied to the games.
+      </p>
+      <div class="cta-row">
+        <a class="button button--primary" href="/newsletter">Get Store Updates</a>
+        <a class="button button--ghost" href="/games">View Games</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="store-tabs">
+    <span class="is-active">All Products</span>
+    <span>Digital Games</span>
+    <span>Apparel</span>
+    <span>Collectibles</span>
+    <span>Soundtracks</span>
+  </section>
+
+  <section class="store-grid">
+    <article class="store-feature">
+      <img src="/assets/images/CloakedprotocolPromoImage2.png" alt="Featured store release" />
+      <div class="store-feature__overlay">
+        <p class="section-label">Featured Release</p>
+        <h2>Cloaked Protocol Founder Edition</h2>
+        <p>
+          A featured slot for the flagship release and its premium editions.
+        </p>
+        <div class="store-price-row">
+          <strong>$69</strong>
+          <a class="button button--primary" href="/press">View Press</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="store-cards">
+      {
+        featuredProducts.map((product) => (
+          <article class="store-card">
+            <div class="store-card__image">
+              <img src={product.image} alt={product.title} />
+            </div>
+            <div class="store-card__body">
+              <p class="section-label">{product.label}</p>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <div class="store-price-row">
+                <strong>{product.price}</strong>
+                <button class="button button--ghost" type="button">Add</button>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="grid-panel">
+    <article class="panel panel--statement">
+      <p class="section-label">Store Strategy</p>
+      <h2>What fits the store.</h2>
+      <p>
+        Apparel, collector items, soundtracks, art products, and direct digital extras all fit this section.
+      </p>
+    </article>
+
+    <article class="panel panel--statement">
+      <p class="section-label">Best First Categories</p>
+      <ul class="sharp-list">
+        <li>Founder-style editions and digital bundles</li>
+        <li>Premium apparel tied to the studio identity</li>
+        <li>Collector prints and concept-driven art products</li>
+        <li>Soundtracks and atmosphere-driven digital extras</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="panel panel--statement panel--newsletter">
+    <p class="section-label">Drop Alerts</p>
+    <h2>Get store updates directly.</h2>
+    <p>
+      Join the mailing list for stock updates, limited drops, and release-day announcements.
+    </p>
+    <a class="button button--primary" href="/newsletter">Join The Dispatch</a>
+  </section>
+</BaseLayout>

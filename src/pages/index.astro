@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroShowcase from "../components/HeroShowcase";
+import { featuredGames, newsItems } from "../data/site";
+---
+
+<BaseLayout
+  title="Garreth Dean Production | Independent Game Studio"
+  description="A sharper, darker game studio website for projects, trailers, news, press, careers, company visibility, and merchandise direction."
+  path="/"
+>
+  <HeroShowcase client:load slides={featuredGames} />
+
+  <section class="monolith-band">
+    <div class="monolith-band__lead">
+      <p class="section-label">Studio</p>
+      <h2>Games first, studio second.</h2>
+      <p>
+        This site exists to present the games clearly, keep updates in one place, and give players, press, and partners a clean way into the work.
+      </p>
+    </div>
+    <div class="monolith-band__data">
+      <div class="metric">
+        <span>Focus</span>
+        <strong>Games, trailers, updates, and press</strong>
+      </div>
+      <div class="metric">
+        <span>Current Projects</span>
+        <strong>Cloaked Protocol and Project Augment</strong>
+      </div>
+      <div class="metric">
+        <span>Direct Channel</span>
+        <strong>Newsletter, press page, and studio updates</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="intel-section">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="section-label">News</p>
+        <h2>Latest updates.</h2>
+      </div>
+      <a class="button button--ghost" href="/news">View All News</a>
+    </div>
+
+    <div class="intel-grid">
+      <article class="intel-card intel-card--feature">
+        <img src="/assets/images/CloakedprotocolPromoImage2.png" alt="Cloaked Protocol environment" />
+        <div class="intel-card__overlay">
+          <p class="section-label">Featured Project</p>
+          <h3>Cloaked Protocol</h3>
+          <p>
+            The flagship title leads the studio site, the press page, and the wider public presentation.
+          </p>
+        </div>
+      </article>
+
+      {
+        newsItems.map((item) => (
+          <article class="intel-card">
+            <p class="section-label">{item.date}</p>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-head">
+    <p class="section-label">Sections</p>
+    <h2>Core sections.</h2>
+  </section>
+
+  <section class="section-grid section-grid--triple">
+    <article class="panel panel--feature">
+      <p class="section-label">Games</p>
+      <h2>Games</h2>
+      <p>
+        Project pages for Cloaked Protocol and Project Augment, with room for key art, trailers, and platform calls to action.
+      </p>
+      <a class="button button--primary" href="/games">Explore Games</a>
+    </article>
+
+    <article class="panel panel--feature">
+      <p class="section-label">Press</p>
+      <h2>Press</h2>
+      <p>
+        Private press access, registration, and materials for approved media, creators, collaborators, and partners.
+      </p>
+      <a class="button button--ghost" href="/press">Open Press</a>
+    </article>
+
+    <article class="panel panel--feature">
+      <p class="section-label">Company</p>
+      <h2>Company</h2>
+      <p>
+        A short overview of the studio, its direction, and what the brand stands for.
+      </p>
+      <a class="button button--ghost" href="/company">View Company</a>
+    </article>
+  </section>
+
+  <section class="panel panel--statement panel--newsletter">
+    <p class="section-label">Newsletter</p>
+    <h2>Get updates directly.</h2>
+    <p>
+      Join the mailing list for announcements, trailer drops, and development news.
+    </p>
+    <a class="button button--primary" href="/newsletter">Join The Dispatch</a>
+  </section>
+</BaseLayout>

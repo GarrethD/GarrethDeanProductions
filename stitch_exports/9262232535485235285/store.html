@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OBSIDIAN MONOLITH - STORE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#e3e2e2",
+              "surface-container-lowest": "#0e0e0e",
+              "on-error-container": "#ffdad6",
+              "inverse-surface": "#e2e2e2",
+              "background": "#131313",
+              "on-secondary-fixed-variant": "#753401",
+              "surface-tint": "#c6c6c7",
+              "primary-fixed-dim": "#c6c6c7",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-fixed-variant": "#464747",
+              "on-primary": "#2f3131",
+              "primary-container": "#e2e2e2",
+              "on-surface": "#e2e2e2",
+              "inverse-primary": "#5d5f5f",
+              "on-tertiary-container": "#646465",
+              "on-tertiary": "#2f3131",
+              "surface-container-highest": "#353535",
+              "surface": "#131313",
+              "error": "#ffb4ab",
+              "on-background": "#e2e2e2",
+              "inverse-on-surface": "#303030",
+              "on-tertiary-fixed": "#1a1c1c",
+              "on-error": "#690005",
+              "surface-container": "#1f1f1f",
+              "outline": "#8e9192",
+              "secondary-fixed": "#ffdbc9",
+              "on-secondary": "#532200",
+              "surface-container-low": "#1b1b1b",
+              "primary-fixed": "#e2e2e2",
+              "primary": "#ffffff",
+              "secondary": "#ffb68c",
+              "on-primary-fixed-variant": "#454747",
+              "tertiary-fixed": "#e3e2e2",
+              "secondary-fixed-dim": "#ffb68c",
+              "secondary-container": "#753401",
+              "tertiary": "#ffffff",
+              "on-primary-fixed": "#1a1c1c",
+              "error-container": "#93000a",
+              "on-secondary-fixed": "#321200",
+              "on-primary-container": "#636565",
+              "surface-bright": "#393939",
+              "on-secondary-container": "#fb9f66",
+              "outline-variant": "#444748",
+              "surface-dim": "#131313",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "surface-variant": "#353535",
+              "on-surface-variant": "#c4c7c8"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(31, 31, 31, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .beveled-primary {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .asymmetric-grid {
+            grid-template-columns: 1fr 2fr;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary selection:text-surface">
+<!-- TopNavBar -->
+<nav class="bg-[#131313]/80 backdrop-blur-xl border-b border-white/10 docked full-width top-0 z-50 fixed w-full">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-none">
+<div class="text-2xl font-black tracking-tighter text-white font-headline">OBSIDIAN MONOLITH</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">HOME</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">GAMES</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">NEWS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">COMPANY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white border-b-2 border-[#ffb68c] pb-1" href="#">STORE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">PRESS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm md:text-base text-white/60 hover:text-[#ffb68c] transition-colors duration-150" href="#">CAREERS</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white hover:text-[#ffb68c] transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="text-white hover:text-[#ffb68c] transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="relative text-white hover:text-[#ffb68c] transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-surface text-[10px] font-bold px-1 min-w-[14px] text-center">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section: Asymmetric & High Contrast -->
+<section class="relative h-[716px] flex items-center overflow-hidden mb-20 px-8">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover brightness-[0.4]" data-alt="dramatic wide shot of a futuristic obsidian monolith floating in a dark atmospheric void with subtle lens flares" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpLPWOO7yCOjtG_U2KXD8CDnd3YZvAmHqWYDqhcNJJiOvBbec_dNiqbkK-o_-ZwWbaIdJ31BmwCuGVF25IhFrwcU1aJVeV_8AjQhVw8M0Is0ANQgQyVtBStLLJEUzbVq0jHttd8KCfG0SAVNLweUSBwL1Zh6uV-wOWlml_A3dgPgO5fp3uNxmw-PFccz83hzbygLeL6_0yUYp7Uwjc-PT872hmskmpDETkpX0dl0Pgd5mXqELiZ1T-vImlObIbsqcGfCoc3kkQsqg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-block bg-secondary/10 border border-secondary/30 px-3 py-1">
+<span class="font-label text-secondary text-xs tracking-widest uppercase font-bold">New Arrival</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none text-white uppercase">
+                        VOID <br/> <span class="text-outline-variant opacity-50">EDITION</span>
+</h1>
+<p class="font-body text-on-surface-variant max-w-md text-lg leading-relaxed">
+                        Limited release physical collectibles and exclusive digital expansions for the Obsidian Universe. Precision engineered for the dedicated operative.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-label font-bold px-10 py-4 uppercase tracking-widest text-sm beveled-primary hover:bg-secondary transition-all active:scale-95">
+                            SHOP COLLECTION
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Navigation -->
+<section class="px-8 max-w-7xl mx-auto mb-16">
+<div class="flex flex-wrap gap-8 items-center justify-start border-b border-outline-variant/20 pb-6">
+<button class="font-label text-sm tracking-[0.2em] font-bold text-secondary border-b-2 border-secondary pb-4 -mb-[18px]">ALL PRODUCTS</button>
+<button class="font-label text-sm tracking-[0.2em] font-medium text-on-surface-variant hover:text-white transition-colors pb-4">DIGITAL GAMES</button>
+<button class="font-label text-sm tracking-[0.2em] font-medium text-on-surface-variant hover:text-white transition-colors pb-4">APPAREL</button>
+<button class="font-label text-sm tracking-[0.2em] font-medium text-on-surface-variant hover:text-white transition-colors pb-4">COLLECTIBLES</button>
+<button class="font-label text-sm tracking-[0.2em] font-medium text-on-surface-variant hover:text-white transition-colors pb-4">GEAR</button>
+</div>
+</section>
+<!-- Product Grid: Digital Games (Bento Style) -->
+<section class="px-8 max-w-7xl mx-auto mb-32">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-3xl font-bold tracking-widest text-white uppercase flex items-center gap-4">
+<span class="w-12 h-[1px] bg-secondary"></span>
+                    Digital Games
+                </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-surface-container border border-white/5">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-75" data-alt="cinematic third-person shooter video game cover art showing a futuristic soldier overlooking a neon city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdxPdpv9O-VCSqjTlujMrTqCUkYL2_f8hgR9G8ifb7BY7rZet0KvI6xSP9ZOroeSQqM269QfdMuCjp8KJQDpof4fEZKaRk7FlUC5XGLzIJ5mX7QHJamt4EIthnsq2wKWYxoLIONRj7X5ZxHBXRcXBJlqr3LaxPerQP9XDQOxyyFkDnTninw6G-XW35FC5qbT4_0HiMcqaRcuZO9XN3REhj_v61bXI0EVOXfwm_Pxb3rc5-06UPA-7TISSe0ecKmsFzwxWWUMtnOgs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label text-secondary text-xs font-bold tracking-widest mb-2 block uppercase">PRE-ORDER</span>
+<h3 class="font-headline text-4xl font-black text-white uppercase tracking-tighter">PROJECT: MONOLITH</h3>
+<p class="font-body text-on-surface-variant mt-2 text-sm max-w-xs">The definitive next-gen action RPG. Reclaiming the void has never been more visceral.</p>
+</div>
+<div class="text-right">
+<p class="font-headline text-2xl text-white mb-4 tracking-tighter">$69.99</p>
+<button class="bg-white text-surface px-6 py-3 font-label text-xs font-black tracking-widest hover:bg-secondary transition-colors uppercase beveled-primary">ADD TO CART</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Game 1 -->
+<div class="group bg-surface-container border border-white/5 relative flex flex-col">
+<div class="aspect-square overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="abstract sci-fi digital art with flowing geometric shapes and glowing orange accents on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbRTqYOsrIV0x7lRgt9qUrleR-CBVNTJ45FJs7rQpkCBsluj6B81m2LiDQeuNe-ubVa0hTIJ2f8d5hg65V2TDkjrQzreCL_lK76Rf9hU76YzWB02htOtdvTuic5PWc_zFdS1b1humcukPSoBTkGexdQm9gBcEjlelNXl4P3QlMwG6p3OFJd8kzDz9XgfOpgo9GAr5zB_sN_xDWYriImapYJ3EAcny6VYiYETjVoIIxvBVaYn7wSBB7szFfjIvlfWxRJFDy6JY_b6Y"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-xl font-bold text-white uppercase tracking-tight">ECHO CHAMBER</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 tracking-widest uppercase">PUZZLE / STRATEGY</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="font-headline text-lg text-white font-bold">$19.99</span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-surface transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Game 2 -->
+<div class="group bg-surface-container border border-white/5 relative flex flex-col">
+<div class="aspect-square overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="stylized isometric landscape of a digital forest with low-poly crystalline structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hS3gWdgunDtHasv70OelOtPOlgT__hbKAx1-1CTo_SUeFCZX8L26p75YeHkpysXgFQRf1xJbL94QESsfdBHZoZbR0RawEcFmP4L8rygYHCfVKHkImc3i7NtLirhMMMhZbWLxJYeSrS-gwRaAcmDg-sUqwUrg0K0neXHdID3iM1esxc5As-SKHrtPrnfsnE923D9nBDEedXzWJQXTfvs2qIufzcpCkEHrBSWeo3KWKUwOjkwJYVgfBtsOSwYXyyonU-PcHqWRIwU"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-xl font-bold text-white uppercase tracking-tight">FRAGMENTED SKY</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 tracking-widest uppercase">SURVIVAL / INDIE</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="font-headline text-lg text-white font-bold">$24.99</span>
+<button class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-surface transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Apparel & Collectibles Section -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-black tracking-tighter text-white uppercase mb-6">STUDIO <span class="text-secondary">TACTICAL</span> GEAR</h2>
+<p class="font-body text-on-surface-variant text-lg">Premium limited-run apparel and high-fidelity collectibles designed by our lead conceptual artists. Once they're gone, the vault closes.</p>
+</div>
+<button class="border border-white/20 px-8 py-3 font-label text-xs tracking-widest text-white uppercase hover:bg-white hover:text-surface transition-all">VIEW ALL APPAREL</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Product 1 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale brightness-90" data-alt="studio shot of a minimalist black technical hoodie on a dark background with dramatic top lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4fzNkUPFnEPQbub2x1tAQC7oD7-_BSrQRwZZG3Rde7MH4ZV_kdqOpjbvXWD2VDciaPt3sC6Dif3g7fIJ3YtvohmycCMuYj4kDSdWhkhTa0JmD0V50If8pyp4Px4UN32EHKlxBXsL4P-YEVO_-rdnqdD-lkya0rxU1Tlt4H89csiwSUPrdhlyTCD8coReMsk20ihSOyzS6vv3sS5QKjNQbel5-HF1Pe5pIbZlUjSwTTUTXYRzxkpBnUoep2IltrivTjf8tK0EyTQg"/>
+<div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-white text-surface font-label text-[10px] font-bold px-2 py-1 tracking-widest uppercase">LIMITED</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">OM STUDIOS HOODIE v1.0</h3>
+<p class="font-label text-xs text-on-surface-variant tracking-widest uppercase">HEAVYWEIGHT COTTON / TECH-WEAVE</p>
+</div>
+<span class="font-headline text-xl text-secondary font-bold">$85.00</span>
+</div>
+<button class="w-full bg-white/5 border border-white/10 text-white font-label text-xs font-bold py-4 tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-all active:scale-95 beveled-primary">ADD TO CART</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-75" data-alt="detailed macro shot of a metallic collectible statue face with futuristic glowing eyes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISEnTNFcU8eQUwRs9jVTtzKReI3SSCq5glsaUMr5Menbd_QYYExvDKfCtDj0QDJzXa-nUAqlOS6VscJRc4oO10BYmJRg7WFKUYYZBjeNo5v4-eLSGiOXVCTqvcAJuWc-EukaESDnm1wGuK4m8WylJ-GJuM2-J62AOv23dt5AhlPCKRMgsHGgEPioAx_8qOkfNXGjQpbk-llJMzXVKwxT8Jeg8m1eN6FQ3Qd5oboLXkMvHa2syN-KKoOpAigEzsuKpf1VeseV3IVQ"/>
+<div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">OPERATIVE BUST: ECHO</h3>
+<p class="font-label text-xs text-on-surface-variant tracking-widest uppercase">1:4 SCALE / HAND-PAINTED POLYSTONE</p>
+</div>
+<span class="font-headline text-xl text-secondary font-bold">$349.00</span>
+</div>
+<button class="w-full bg-white/5 border border-white/10 text-white font-label text-xs font-bold py-4 tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-all active:scale-95 beveled-primary">ADD TO CART</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="relative aspect-[3/4] bg-surface-container overflow-hidden mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale brightness-90" data-alt="minimalist studio photography of a sleek futuristic watch with a black metal band on a dark textured surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpL68Dqwif8FqZ5HODBzQ409XzvzXRfPfi-08vBgM3VR9kXxbPHIRnNWT8yai0CYLUgM2pkUb-vohqQpr8PSy0y-nPogrXl5uhV9OEEe0_CS6yhKlCaqYJsJJa-OsObZ7p3E1hcIfgz9PJf187n3oabj7ct1v-4T2A6Nmz0UlJ1D2HX3KcIMZthrMglfsbzi8WyprRutCde3vK3WKhnW4dgl6k3Hn5RqPf_6tRAjs81PHj56jhsL4Wfrlc7gxpwSibZWIK2wRnQ4o"/>
+<div class="absolute inset-0 border border-white/5 pointer-events-none"></div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white uppercase tracking-tight">CHRONO LINK WATCH</h3>
+<p class="font-label text-xs text-on-surface-variant tracking-widest uppercase">AEROSPACE GRADE STEEL / DLC COATING</p>
+</div>
+<span class="font-headline text-xl text-secondary font-bold">$120.00</span>
+</div>
+<button class="w-full bg-white/5 border border-white/10 text-white font-label text-xs font-bold py-4 tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-all active:scale-95 beveled-primary">ADD TO CART</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community -->
+<section class="py-32 px-8 max-w-7xl mx-auto border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h2 class="font-headline text-5xl font-black tracking-tighter text-white uppercase leading-none">JOIN THE <br/> INVENTORY NETWORK</h2>
+<p class="font-body text-on-surface-variant text-lg">Receive tactical updates on restocks, exclusive pre-orders, and secret drops before they hit the public feed.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="bg-surface-container-high border-none text-white px-6 py-4 font-label text-sm tracking-widest flex-grow focus:ring-1 focus:ring-secondary transition-all outline-none" placeholder="ENTER YOUR COORDINATES (EMAIL)" type="email"/>
+<button class="bg-secondary text-surface px-8 py-4 font-label font-black text-xs tracking-[0.2em] uppercase hover:bg-white transition-colors">TRANSMIT</button>
+</div>
+</div>
+<div class="relative h-64 md:h-96">
+<img alt="" class="w-full h-full object-cover border border-white/10 grayscale brightness-50" data-alt="cyberpunk electronics and server components with glowing cyan and orange status lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4s_RlVqhe7Njoi_9MEnzuc_lHrlHiqq_XY2D25itinfHgHwxZHH2CFGLTlht7OfYdriTmxgU8RwLVbOUY8c0N5EwJ1k_iC53-VkIss5C68Tapz1SYhdLTgFyGohkeZQXsGzVxJVue9aXxJ2AzwKjIjWEWd7j8aHbOgxtDn3Rz1j4HcdKBjMpwkpAGMpdZwtp28PBCybSzlmE06c8q63GW4KesmnWT7FhTv0isjGZtl4QstQsCQ1d4WLM5rTZ6VdHfsRZS7rHzj74"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<p class="font-headline text-8xl font-black text-white/5 tracking-[0.2em] select-none">ENCRYPTED</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] full-width py-12 px-8 border-t border-white/5">
+<div class="bg-gradient-to-r from-transparent via-white/10 to-transparent h-[1px] mb-8"></div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-white font-headline tracking-tighter">OBSIDIAN MONOLITH</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-[10px] md:text-xs text-white/40 hover:text-[#ffb68c] transition-colors duration-150" href="#">PRIVACY POLICY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-[10px] md:text-xs text-white/40 hover:text-[#ffb68c] transition-colors duration-150" href="#">TERMS OF SERVICE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-[10px] md:text-xs text-white/40 hover:text-[#ffb68c] transition-colors duration-150" href="#">COOKIE SETTINGS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-[10px] md:text-xs text-white/40 hover:text-[#ffb68c] transition-colors duration-150" href="#">CONTACT</a>
+</div>
+<div class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-[10px] md:text-xs text-white/40">
+                © 2024 OBSIDIAN MONOLITH STUDIOS. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<!-- Floating Action: Quick Cart Access (only on home/store screens as per rules) -->
+<div class="fixed bottom-8 right-8 z-[60]">
+<button class="w-16 h-16 bg-secondary text-surface flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-transform group">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="shopping_basket">shopping_basket</span>
+<div class="absolute -top-2 -left-2 bg-white text-surface text-xs font-black w-6 h-6 flex items-center justify-center rounded-full border-2 border-background">2</div>
+</button>
+</div>
+</body></html>

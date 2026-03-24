@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PressPortal from "../components/PressPortal";
+---
+
+<BaseLayout
+  title="Press | Garreth Dean Production"
+  description="Private press access page for Garreth Dean Production."
+  path="/press"
+>
+  <section class="page-hero page-hero--compact">
+    <p class="section-label">Press</p>
+    <h1>Private press portal.</h1>
+    <p>
+      This portal now runs on Supabase auth and database access. Approved press, creators, and partners can register, sign in,
+      reset passwords, and unlock materials after approval.
+    </p>
+  </section>
+  <PressPortal client:load />
+</BaseLayout>

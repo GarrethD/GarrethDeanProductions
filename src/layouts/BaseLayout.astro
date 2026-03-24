@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+type Props = {
+  title: string;
+  description: string;
+  path: string;
+};
+
+const { title, description, path } = Astro.props;
+const canonical = new URL(path, "https://garrethdean.com").toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://garrethdean.com/assets/images/CloakedprotocolPromoImage2.png" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <SiteHeader currentPath={path} />
+      <main>
+        <slot />
+      </main>
+      <SiteFooter />
+    </div>
+
+    <script>
+      const button = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".site-nav");
+
+      if (button && nav) {
+        button.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          document.body.classList.toggle("nav-open", isOpen);
+        });
+      }
+    </script>
+  </body>
+</html>
