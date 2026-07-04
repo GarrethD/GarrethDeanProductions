@@ -26,8 +26,10 @@ const canonical = new URL(path, "https://garrethdean.com").toString();
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content="https://garrethdean.com/assets/images/CloakedprotocolPromoImage2.png" />
+    <meta name="theme-color" content="#050505" />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
     <div class="page-shell">
       <SiteHeader currentPath={path} />
       <main>
@@ -46,6 +48,12 @@ const canonical = new URL(path, "https://garrethdean.com").toString();
           button.setAttribute("aria-expanded", isOpen ? "true" : "false");
           document.body.classList.toggle("nav-open", isOpen);
         });
+
+        nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          button.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("nav-open");
+        }));
       }
     </script>
   </body>

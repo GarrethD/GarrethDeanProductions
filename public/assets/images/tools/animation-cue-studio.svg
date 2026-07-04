@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Animation Cue Studio</title>
+  <desc id="desc">A dark animation timeline interface with red cue markers.</desc>
+  <rect width="1200" height="675" fill="#080808"/>
+  <path d="M0 0h1200v84H0z" fill="#111"/>
+  <path d="M0 84h260v591H0z" fill="#0d0d0d"/>
+  <path d="M260 84h940v375H260z" fill="#151515"/>
+  <path d="M260 459h940v216H260z" fill="#0c0c0c"/>
+  <g stroke="#303030">
+    <path d="M0 84h1200M260 84v591M260 459h940"/>
+    <path d="M260 513h940M260 567h940M260 621h940"/>
+    <path d="M380 459v216M500 459v216M620 459v216M740 459v216M860 459v216M980 459v216M1100 459v216"/>
+  </g>
+  <g fill="#e33b2e">
+    <rect x="430" y="481" width="140" height="28"/>
+    <rect x="690" y="535" width="120" height="28"/>
+    <rect x="900" y="589" width="155" height="28"/>
+    <rect x="617" y="459" width="3" height="216"/>
+  </g>
+  <g fill="#f2f1ed" font-family="Arial, sans-serif">
+    <text x="38" y="52" font-size="24" font-weight="700">ANIMATION CUE STUDIO</text>
+    <text x="292" y="130" font-size="18">ANIMATION PREVIEW</text>
+    <text x="35" y="132" font-size="16">ANIMATION STATES</text>
+    <text x="35" y="184" font-size="20" font-weight="700">Jump Attack</text>
+    <text x="35" y="228" font-size="18" fill="#888">Combo Attack</text>
+    <text x="35" y="272" font-size="18" fill="#888">Walk Forward</text>
+  </g>
+  <circle cx="730" cy="255" r="42" fill="#050505"/>
+  <path d="M700 297l-38 102m96-102 42 102m-70-100v98m-34-65 70-4" stroke="#050505" stroke-width="26" stroke-linecap="round"/>
+</svg>

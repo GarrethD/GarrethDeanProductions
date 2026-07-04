@@ -6,8 +6,10 @@ const { currentPath } = Astro.props;
 
 <header class="site-header">
   <a href="/" class="brand">
-    <span class="brand__kicker">Garreth Dean</span>
-    <span class="brand__name">Production</span>
+    <span class="brand__mark">GD</span>
+    <span>
+      <span class="brand__name">GD Productions</span>
+    </span>
   </a>
 
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -24,4 +26,5 @@ const { currentPath } = Astro.props;
       ))
     }
   </nav>
+  <a class="header-cta" href="/newsletter">Get updates <span aria-hidden="true">↗</span></a>
 </header>

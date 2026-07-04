@@ -39,7 +39,7 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <form className="press-form" onSubmit={handleSubmit}>
+    <form className="newsletter-form" onSubmit={handleSubmit}>
       <label>
         <span>First name</span>
         <input
@@ -64,7 +64,7 @@ export default function NewsletterSignup() {
         />
       </label>
       <button className="button button--primary" type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Joining..." : "Join The Dispatch"}
+        {isSubmitting ? "Joining..." : "Join Newsletter"}
       </button>
       {status ? <p className="form-feedback form-feedback--success">{status}</p> : null}
       {error ? <p className="form-feedback form-feedback--error">{error}</p> : null}
