@@ -1,20 +1,18 @@
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/games", label: "Games" },
-  { href: "/news", label: "News" },
-  { href: "/press", label: "Press" },
-  { href: "/careers", label: "Careers" },
-  { href: "/company", label: "Company" },
+  { href: "/tools", label: "Tools" },
+  { href: "/company", label: "About" },
 ];
 
 export const featuredGames = [
   {
     title: "Cloaked Protocol",
-    tag: "Flagship Project",
+    tag: "Cloaked Protocol",
     status: "In Development",
-    platforms: "PC first, with console plans after the core release is locked",
+    platforms: "PC / Steam",
     summary:
-      "A stealth action thriller built around retro-futurist espionage, infiltration, and high-pressure missions. This is the flagship project and the main long-term release Garreth Dean Production is building toward.",
+      "A third-person stealth action thriller set in a retro-futurist world of espionage, infiltration, and high-pressure missions.",
     image: "/assets/images/CloakedprotocolPromoImage2.png",
     logo: "/assets/images/CloakedProtocol_Logo.png",
     video: "/assets/videos/fog.webm",
@@ -23,48 +21,27 @@ export const featuredGames = [
       label: "Wishlist Now",
     },
     secondaryCta: {
-      href: "/press",
-      label: "Press Assets",
+      href: "/newsletter",
+      label: "Get Updates",
     },
   },
   {
-    title: "Project Augment",
-    tag: "Companion Experience",
-    status: "Active Prototype",
-    platforms: "Playable companion project in the same universe",
+    title: "Augment Protocol",
+    tag: "Augment Protocol",
+    status: "In Development",
+    platforms: "PC / Steam",
     summary:
-      "A faster project set in the same universe, built to give players something to experience while Cloaked Protocol is in development. It also serves as a proving ground for mechanics, combat feel, and features that can feed back into the flagship game.",
+      "A fast third-person action game set in the same universe as Cloaked Protocol, with a stronger focus on combat and replayability.",
     image: "/assets/images/ProjectAugment_NoTitle.jpg",
     logo: "/assets/images/store_capsule_main2.png",
     video: "/assets/videos/hellsmoke.webm",
     primaryCta: {
-      href: "/games",
-      label: "View Project",
+      href: "https://store.steampowered.com/app/4231220/Augment_Protocol/",
+      label: "Wishlist Now",
     },
     secondaryCta: {
-      href: "/news",
-      label: "Latest Updates",
+      href: "/newsletter",
+      label: "Get Updates",
     },
-  },
-];
-
-export const newsItems = [
-  {
-    date: "Studio Update",
-    title: "Garreth Dean Production is now the studio name across the site",
-    summary:
-      "The site, project pages, and outward-facing materials now sit under one studio identity.",
-  },
-  {
-    date: "Web Build",
-    title: "The website is being rebuilt around the games first",
-    summary:
-      "Current work is focused on clearer project presentation, cleaner navigation, and a stronger mobile layout.",
-  },
-  {
-    date: "Next Milestone",
-    title: "Press access, project polish, and launch cleanup",
-    summary:
-      "Next steps are secure press access, stronger page polish, and a tighter first-release presentation.",
   },
 ];

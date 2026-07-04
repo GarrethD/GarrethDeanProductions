@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Tools | GD Productions"
+  description="Unity tools from GD Productions."
+  path="/tools"
+>
+  <section class="page-hero page-hero--tools">
+    <p class="eyebrow">Tools</p>
+    <h1>Tools and<br />documentation.</h1>
+    <p>Unity tools and documentation.</p>
+  </section>
+
+  <section class="tool-catalogue" aria-label="Available tools">
+    <article class="tool-card tool-card--coming-soon">
+      <img src="/assets/images/tools/animation-cue-studio.svg" alt="" />
+      <span class="tool-card__status">Coming Soon</span>
+      <div class="tool-card__body">
+        <span class="eyebrow">Unity / Animation</span>
+        <h2>Animation Cue Studio</h2>
+        <p>Author, preview, and validate animation events on a visual timeline.</p>
+      </div>
+    </article>
+  </section>
+</BaseLayout>
