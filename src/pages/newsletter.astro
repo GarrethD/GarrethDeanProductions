@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import NewsletterSignup from "../components/NewsletterSignup";
 ---
 
 <BaseLayout
@@ -15,7 +14,12 @@ import NewsletterSignup from "../components/NewsletterSignup";
       <p>Join the newsletter for news about Cloaked Protocol, Augment Protocol, trailers, and release dates.</p>
     </div>
     <div class="newsletter-card">
-      <NewsletterSignup client:load />
+      <script
+        is:inline
+        async
+        src="https://eomail5.com/form/2e99da00-7806-11f1-acb0-4f10231cc5b2.js"
+        data-form="2e99da00-7806-11f1-acb0-4f10231cc5b2"
+      ></script>
     </div>
   </section>
 </BaseLayout>
