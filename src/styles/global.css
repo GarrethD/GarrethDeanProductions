@@ -377,6 +377,98 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .newsletter-form input:focus { outline: 1px solid var(--lime); }
 .newsletter-form .button { margin-top: 4px; }
+
+.newsletter-card [data-form],
+.newsletter-card [data-form] .inline-container,
+.newsletter-card [data-form] .eo-form-wrapper,
+.newsletter-card [data-form] .form-container,
+.newsletter-card [data-form] .emailoctopus-form-wrapper,
+.newsletter-card [data-form] .emailoctopus-form,
+.newsletter-card [data-form] .main-form,
+.newsletter-card [data-form] [eo-form-fields-container],
+.newsletter-card [data-form] .emailoctopus-form-row {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.newsletter-card [data-form] .eo-form-wrapper > [eo-block-container] {
+  display: none !important;
+}
+
+.newsletter-card [data-form] .emailoctopus-form-row {
+  margin: 0 !important;
+}
+
+.newsletter-card [data-form] .emailoctopus-form-row-hp {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.newsletter-card [data-form] label {
+  color: var(--muted) !important;
+  font: .65rem "IBM Plex Mono", monospace !important;
+  text-transform: uppercase;
+}
+
+.newsletter-card [data-form] .main-form input:not([type="submit"]):not([type="checkbox"]) {
+  width: 100% !important;
+  min-height: 56px !important;
+  margin: 0 !important;
+  padding: 0 16px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  background: #090909 !important;
+  color: var(--text) !important;
+  font: 1rem "Space Grotesk", Arial, sans-serif !important;
+}
+
+.newsletter-card [data-form] .main-form input:not([type="submit"]):focus {
+  border-color: var(--lime) !important;
+  outline: none !important;
+}
+
+.newsletter-card [data-form] input[type="submit"] {
+  width: 100% !important;
+  min-height: 54px !important;
+  margin: 0 !important;
+  border: 1px solid var(--lime) !important;
+  border-radius: 0 !important;
+  background: var(--lime) !important;
+  color: #fff !important;
+  font: 700 .78rem "IBM Plex Mono", monospace !important;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.newsletter-card [data-form] .mastfoot {
+  display: none !important;
+}
+
+.newsletter-card [data-form] .emailoctopus-success-message,
+.newsletter-card [data-form] .emailoctopus-error-message {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 22px 24px !important;
+  border: 1px solid var(--line) !important;
+  border-left: 3px solid var(--lime) !important;
+  background: #090909 !important;
+  color: var(--text) !important;
+  font: 1rem/1.6 "Space Grotesk", Arial, sans-serif !important;
+  text-align: left !important;
+}
+
+.newsletter-card [data-form] .emailoctopus-success-message:empty,
+.newsletter-card [data-form] .emailoctopus-error-message:empty {
+  display: none !important;
+}
 .press-form { display: grid; gap: 16px; margin-top: 22px; }
 .press-form--grid { grid-template-columns: 1fr 1fr; }
 .press-form label, .press-form__full { display: grid; gap: 8px; }
@@ -496,7 +588,11 @@ h1, h2, h3, .brand__name, .project-tile h3, .game-feature h2,
 }
 .newsletter-page h1 { font-size: clamp(3.8rem, 8vw, 7.8rem); }
 .newsletter-page > div > p:last-child { max-width: 620px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
-.newsletter-card { padding: clamp(26px, 5vw, 54px); border: 1px solid var(--line); background: var(--surface); }
+.newsletter-card {
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(242, 241, 237, .72);
+  background: #090909;
+}
 
 .about-grid {
   display: grid;

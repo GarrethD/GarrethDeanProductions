@@ -1,14 +1,8 @@
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-
-const supabaseOrigin = process.env.PUBLIC_SUPABASE_URL
-  ? new URL(process.env.PUBLIC_SUPABASE_URL).origin
-  : "https://zxrboenwwbrmkwksswji.supabase.co";
 
 export default defineConfig({
   site: "https://garrethdean.com",
   output: "static",
-  integrations: [react()],
   markdown: {
     syntaxHighlight: false,
   },
@@ -17,19 +11,19 @@ export default defineConfig({
       directives: [
         "default-src 'self'",
         "base-uri 'self'",
-        `connect-src 'self' ${supabaseOrigin}`,
+        "connect-src 'self' https://eomail5.com https://www.google.com",
         "font-src 'self' https://fonts.gstatic.com",
-        "form-action 'self'",
-        "frame-src 'none'",
-        "img-src 'self' data:",
+        "form-action 'self' https://eomail5.com",
+        "frame-src https://www.google.com",
+        "img-src 'self' data: https://www.google.com https://www.gstatic.com",
         "media-src 'self'",
         "object-src 'none'",
       ],
       scriptDirective: {
-        resources: ["'self'"],
+        resources: ["'self'", "https://eomail5.com", "https://www.google.com", "https://www.gstatic.com"],
       },
       styleDirective: {
-        resources: ["'self'", "https://fonts.googleapis.com"],
+        resources: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       },
     },
   },
