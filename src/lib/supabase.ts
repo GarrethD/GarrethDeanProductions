@@ -1,26 +1,51 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl =
-  import.meta.env.PUBLIC_SUPABASE_URL ?? "https://zxrboenwwbrmkwksswji.supabase.co";
-const supabasePublishableKey =
-  import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "sb_publishable_hNZjQUcZvVs8LhW3zNH79A_8NvfqKXw";
+type Database = {
+  public: {
+    Tables: {
+      newsletter_subscribers: {
+        Row: {
+          email: string;
+          first_name: string | null;
+          source: string;
+          status: string;
+        };
+        Insert: {
+          email: string;
+          first_name?: string | null;
+          source?: string;
+          status?: string;
+        };
+        Update: Partial<Database["public"]["Tables"]["newsletter_subscribers"]["Insert"]>;
+        Relationships: [];
+      };
+    };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
+  };
+};
 
-let browserClient:
-  | ReturnType<typeof createClient>
-  | undefined;
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabasePublishableKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+let browserClient: SupabaseClient<Database> | undefined;
 
 export function getSupabaseBrowserClient() {
+  if (!supabaseUrl || !supabasePublishableKey) {
+    throw new Error("Newsletter configuration is missing.");
+  }
+
   if (!browserClient) {
-    browserClient = createClient(supabaseUrl, supabasePublishableKey, {
+    browserClient = createClient<Database>(supabaseUrl, supabasePublishableKey, {
       auth: {
-        autoRefreshToken: true,
-        persistSession: true,
-        detectSessionInUrl: true,
+        autoRefreshToken: false,
+        persistSession: false,
+        detectSessionInUrl: false,
       },
     });
   }
 
   return browserClient;
 }
-
-export { supabasePublishableKey, supabaseUrl };
