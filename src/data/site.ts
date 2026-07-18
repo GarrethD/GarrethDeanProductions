@@ -13,7 +13,7 @@ export const featuredGames = [
     platforms: "PC / Steam",
     summary:
       "A third-person stealth action thriller set in a retro-futurist world of espionage, infiltration, and high-pressure missions.",
-    image: "/assets/images/CloakedprotocolPromoImage2.png",
+    image: "/assets/images/CloakedprotocolPromoImage2.jpg",
     logo: "/assets/images/CloakedProtocol_Logo.png",
     video: "/assets/videos/fog.webm",
     primaryCta: {
