@@ -19,6 +19,11 @@ const canonical = new URL(path, "https://garrethdean.com").toString();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
@@ -31,6 +36,18 @@ const canonical = new URL(path, "https://garrethdean.com").toString();
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content="https://garrethdean.com/assets/images/CloakedprotocolPromoImage2.jpg" />
     <meta name="theme-color" content="#050505" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GD Productions",
+      "url": "https://garrethdean.com",
+      "logo": "https://garrethdean.com/favicon-512.png",
+      "sameAs": [
+        "https://bsky.app/profile/garrethdean.bsky.social",
+        "https://x.com/GarrethDean",
+        "https://www.youtube.com/@GarrethDean1",
+      ],
+    })} />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
